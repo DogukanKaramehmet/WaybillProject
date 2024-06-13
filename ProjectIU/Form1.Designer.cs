@@ -85,6 +85,7 @@
             irsaliyeGeçmişiToolStripMenuItem.Name = "irsaliyeGeçmişiToolStripMenuItem";
             irsaliyeGeçmişiToolStripMenuItem.Size = new Size(100, 20);
             irsaliyeGeçmişiToolStripMenuItem.Text = "İrsaliye Geçmişi";
+            irsaliyeGeçmişiToolStripMenuItem.Click += irsaliyeGeçmişiToolStripMenuItem_Click;
             // 
             // müşterilerToolStripMenuItem
             // 
@@ -96,14 +97,16 @@
             // kurumsalMüşteriToolStripMenuItem
             // 
             kurumsalMüşteriToolStripMenuItem.Name = "kurumsalMüşteriToolStripMenuItem";
-            kurumsalMüşteriToolStripMenuItem.Size = new Size(167, 22);
+            kurumsalMüşteriToolStripMenuItem.Size = new Size(180, 22);
             kurumsalMüşteriToolStripMenuItem.Text = "Kurumsal Müşteri";
+            kurumsalMüşteriToolStripMenuItem.Click += kurumsalMüşteriToolStripMenuItem_Click;
             // 
             // bireyselMüşteriToolStripMenuItem
             // 
             bireyselMüşteriToolStripMenuItem.Name = "bireyselMüşteriToolStripMenuItem";
-            bireyselMüşteriToolStripMenuItem.Size = new Size(167, 22);
+            bireyselMüşteriToolStripMenuItem.Size = new Size(180, 22);
             bireyselMüşteriToolStripMenuItem.Text = "Bireysel Müşteri";
+            bireyselMüşteriToolStripMenuItem.Click += bireyselMüşteriToolStripMenuItem_Click;
             // 
             // btnBireysel
             // 

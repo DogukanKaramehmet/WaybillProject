@@ -28,76 +28,131 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
-            irsaliyeYazdırToolStripMenuItem = new ToolStripMenuItem();
-            irsaliyeGeçmişiToolStripMenuItem = new ToolStripMenuItem();
-            müşterilerToolStripMenuItem = new ToolStripMenuItem();
-            kurumsalMüşteriToolStripMenuItem = new ToolStripMenuItem();
-            bireyselMüşteriToolStripMenuItem = new ToolStripMenuItem();
-            menuStrip1.SuspendLayout();
+            lblName = new Label();
+            txtName = new TextBox();
+            txtSurname = new TextBox();
+            lblSurname = new Label();
+            txtPhoneNumber = new TextBox();
+            lblPohneNumber = new Label();
+            txtAddress = new TextBox();
+            lblAddress = new Label();
+            btnAdd = new Button();
             SuspendLayout();
             // 
-            // menuStrip1
+            // lblName
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { irsaliyeYazdırToolStripMenuItem, irsaliyeGeçmişiToolStripMenuItem, müşterilerToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1264, 24);
-            menuStrip1.TabIndex = 2;
-            menuStrip1.Text = "menuStrip1";
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Segoe UI", 20F);
+            lblName.Location = new Point(59, 83);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(57, 37);
+            lblName.TabIndex = 0;
+            lblName.Text = "Adı";
             // 
-            // irsaliyeYazdırToolStripMenuItem
+            // txtName
             // 
-            irsaliyeYazdırToolStripMenuItem.Name = "irsaliyeYazdırToolStripMenuItem";
-            irsaliyeYazdırToolStripMenuItem.Size = new Size(89, 20);
-            irsaliyeYazdırToolStripMenuItem.Text = "İrsaliye Yazdır";
+            txtName.Font = new Font("Segoe UI", 20F);
+            txtName.Location = new Point(59, 123);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(200, 43);
+            txtName.TabIndex = 1;
             // 
-            // irsaliyeGeçmişiToolStripMenuItem
+            // txtSurname
             // 
-            irsaliyeGeçmişiToolStripMenuItem.Name = "irsaliyeGeçmişiToolStripMenuItem";
-            irsaliyeGeçmişiToolStripMenuItem.Size = new Size(100, 20);
-            irsaliyeGeçmişiToolStripMenuItem.Text = "İrsaliye Geçmişi";
+            txtSurname.Font = new Font("Segoe UI", 20F);
+            txtSurname.Location = new Point(59, 209);
+            txtSurname.Name = "txtSurname";
+            txtSurname.Size = new Size(200, 43);
+            txtSurname.TabIndex = 3;
             // 
-            // müşterilerToolStripMenuItem
+            // lblSurname
             // 
-            müşterilerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { kurumsalMüşteriToolStripMenuItem, bireyselMüşteriToolStripMenuItem });
-            müşterilerToolStripMenuItem.Name = "müşterilerToolStripMenuItem";
-            müşterilerToolStripMenuItem.Size = new Size(72, 20);
-            müşterilerToolStripMenuItem.Text = "Müşteriler";
+            lblSurname.AutoSize = true;
+            lblSurname.Font = new Font("Segoe UI", 20F);
+            lblSurname.Location = new Point(59, 169);
+            lblSurname.Name = "lblSurname";
+            lblSurname.Size = new Size(97, 37);
+            lblSurname.TabIndex = 2;
+            lblSurname.Text = "Soyadı";
             // 
-            // kurumsalMüşteriToolStripMenuItem
+            // txtPhoneNumber
             // 
-            kurumsalMüşteriToolStripMenuItem.Name = "kurumsalMüşteriToolStripMenuItem";
-            kurumsalMüşteriToolStripMenuItem.Size = new Size(167, 22);
-            kurumsalMüşteriToolStripMenuItem.Text = "Kurumsal Müşteri";
+            txtPhoneNumber.Font = new Font("Segoe UI", 20F);
+            txtPhoneNumber.Location = new Point(59, 295);
+            txtPhoneNumber.Name = "txtPhoneNumber";
+            txtPhoneNumber.Size = new Size(200, 43);
+            txtPhoneNumber.TabIndex = 5;
             // 
-            // bireyselMüşteriToolStripMenuItem
+            // lblPohneNumber
             // 
-            bireyselMüşteriToolStripMenuItem.Name = "bireyselMüşteriToolStripMenuItem";
-            bireyselMüşteriToolStripMenuItem.Size = new Size(167, 22);
-            bireyselMüşteriToolStripMenuItem.Text = "Bireysel Müşteri";
+            lblPohneNumber.AutoSize = true;
+            lblPohneNumber.Font = new Font("Segoe UI", 20F);
+            lblPohneNumber.Location = new Point(59, 255);
+            lblPohneNumber.Name = "lblPohneNumber";
+            lblPohneNumber.Size = new Size(102, 37);
+            lblPohneNumber.TabIndex = 4;
+            lblPohneNumber.Text = "Telefon";
+            // 
+            // txtAddress
+            // 
+            txtAddress.Font = new Font("Segoe UI", 20F);
+            txtAddress.Location = new Point(311, 123);
+            txtAddress.Multiline = true;
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(423, 215);
+            txtAddress.TabIndex = 7;
+            // 
+            // lblAddress
+            // 
+            lblAddress.AutoSize = true;
+            lblAddress.Font = new Font("Segoe UI", 20F);
+            lblAddress.Location = new Point(311, 83);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(84, 37);
+            lblAddress.TabIndex = 6;
+            lblAddress.Text = "Adres";
+            // 
+            // btnAdd
+            // 
+            btnAdd.Font = new Font("Segoe UI", 20F);
+            btnAdd.Location = new Point(59, 384);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(200, 86);
+            btnAdd.TabIndex = 8;
+            btnAdd.Text = "KAYDET";
+            btnAdd.UseVisualStyleBackColor = true;
             // 
             // IndividualCustomer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1264, 681);
-            Controls.Add(menuStrip1);
+            ClientSize = new Size(784, 561);
+            Controls.Add(btnAdd);
+            Controls.Add(txtAddress);
+            Controls.Add(lblAddress);
+            Controls.Add(txtPhoneNumber);
+            Controls.Add(lblPohneNumber);
+            Controls.Add(txtSurname);
+            Controls.Add(lblSurname);
+            Controls.Add(txtName);
+            Controls.Add(lblName);
             Name = "IndividualCustomer";
-            Text = "IndividualCustomer";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Bireysel Müşteri";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem irsaliyeYazdırToolStripMenuItem;
-        private ToolStripMenuItem irsaliyeGeçmişiToolStripMenuItem;
-        private ToolStripMenuItem müşterilerToolStripMenuItem;
-        private ToolStripMenuItem kurumsalMüşteriToolStripMenuItem;
-        private ToolStripMenuItem bireyselMüşteriToolStripMenuItem;
+        private Label lblName;
+        private TextBox txtName;
+        private TextBox txtSurname;
+        private Label lblSurname;
+        private TextBox txtPhoneNumber;
+        private Label lblPohneNumber;
+        private TextBox txtAddress;
+        private Label lblAddress;
+        private Button btnAdd;
     }
 }
