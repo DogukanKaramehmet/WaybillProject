@@ -71,6 +71,7 @@
             Name = "WaybillHistory";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "İrsaliye Geçmişi";
+            Load += WaybillHistory_Load;
             ((System.ComponentModel.ISupportInitialize)dgwWaybillHistory).EndInit();
             ResumeLayout(false);
             PerformLayout();

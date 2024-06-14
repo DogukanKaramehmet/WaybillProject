@@ -12,9 +12,15 @@ namespace ProjectIU
 {
     public partial class WaybillHistory : Form
     {
+
         public WaybillHistory()
         {
             InitializeComponent();
+        }
+
+        private void WaybillHistory_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
