@@ -1,6 +1,6 @@
 ﻿namespace ProjectIU
 {
-    partial class CorporateCustomer
+    partial class Corporate
     {
         /// <summary>
         /// Required designer variable.

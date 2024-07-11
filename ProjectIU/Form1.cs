@@ -36,13 +36,13 @@ namespace ProjectIU
 
         private void bireyselMüþteriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            IndividualCustomer ýndividualCustomer = new IndividualCustomer();
+            Individual ýndividualCustomer = new Individual();
             ýndividualCustomer.Show();
         }
 
         private void kurumsalMüþteriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CorporateCustomer corporateCustomer = new CorporateCustomer();
+            Corporate corporateCustomer = new Corporate();
             corporateCustomer.Show();
         }
     }

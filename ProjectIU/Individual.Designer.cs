@@ -1,6 +1,6 @@
 ﻿namespace ProjectIU
 {
-    partial class IndividualCustomer
+    partial class Individual
     {
         /// <summary>
         /// Required designer variable.
@@ -121,6 +121,7 @@
             btnAdd.TabIndex = 8;
             btnAdd.Text = "KAYDET";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // IndividualCustomer
             // 
@@ -139,6 +140,7 @@
             Name = "IndividualCustomer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Bireysel Müşteri";
+            Load += IndividualCustomer_Load;
             ResumeLayout(false);
             PerformLayout();
         }

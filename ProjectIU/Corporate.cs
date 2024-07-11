@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectIU
 {
-    public partial class IndividualCustomer : Form
+    public partial class Corporate : Form
     {
-        public IndividualCustomer()
+        public Corporate()
         {
             InitializeComponent();
         }
