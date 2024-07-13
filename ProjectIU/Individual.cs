@@ -25,8 +25,8 @@ namespace ProjectIU
         public Individual()
         {
             InitializeComponent();
-            IIndividualCustomerDal customerRepository = new EfIndividualCustomerDal();
-            _ındividualCustomerServices = new IndividualCustomerManager(customerRepository);
+            IIndividualCustomerDal ındividualCustomerDal = new EfIndividualCustomerDal();
+            _ındividualCustomerServices = new IndividualCustomerManager(ındividualCustomerDal);
 
         }
 
@@ -39,16 +39,13 @@ namespace ProjectIU
         {
             try
             {
-
-
-
                 string name = txtName.Text;
                 string surname = txtSurname.Text;
                 string phoneText = txtPhoneNumber.Text;
                 string address = txtAddress.Text;
 
 
-                if (int.TryParse(phoneText, out int phoneNumber))
+                if (Int64.TryParse(phoneText, out Int64 phoneNumber))
                 {
 
                     IndividualCustomer customer = new IndividualCustomer
@@ -59,6 +56,7 @@ namespace ProjectIU
                         Phone = phoneNumber
                     };
                     _ındividualCustomerServices.Add(customer);
+                    KişiEklendi();
                 }
             }
             catch (Exception ex)
@@ -66,6 +64,11 @@ namespace ProjectIU
                 // Hata mesajı göster
                 MessageBox.Show($"Hata: {ex.Message}");
             }
+        }
+
+        private static void KişiEklendi()
+        {
+            MessageBox.Show("Kişi Eklendi");
         }
     }
 }

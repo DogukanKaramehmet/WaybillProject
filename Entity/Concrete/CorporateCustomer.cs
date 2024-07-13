@@ -11,7 +11,7 @@ namespace Entity.Concrete
     {
         public int CorporateCustomerId { get; set; }
         public string CompanyName { get; set; }
-        public int Phone { get; set; }
+        public Int64 Phone { get; set; }
         public string Address { get; set; }
     }
 }

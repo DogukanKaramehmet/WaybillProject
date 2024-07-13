@@ -12,7 +12,7 @@ namespace Entity.Concrete
         public int IndividualCustomerId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public int Phone { get; set; }
+        public Int64 Phone { get; set; }
         public string Address { get; set; }
 
     }

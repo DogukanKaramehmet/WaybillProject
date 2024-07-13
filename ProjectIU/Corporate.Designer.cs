@@ -46,6 +46,7 @@
             btnAdd.TabIndex = 17;
             btnAdd.Text = "KAYDET";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // txtAddress
             // 
@@ -102,7 +103,7 @@
             lblName.TabIndex = 9;
             lblName.Text = "Kurum İsmi";
             // 
-            // CorporateCustomer
+            // Corporate
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -114,9 +115,10 @@
             Controls.Add(lblPohneNumber);
             Controls.Add(txtName);
             Controls.Add(lblName);
-            Name = "CorporateCustomer";
+            Name = "Corporate";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Kurumsal Müşteri";
+            Load += Corporate_Load;
             ResumeLayout(false);
             PerformLayout();
         }
