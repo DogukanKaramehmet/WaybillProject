@@ -70,7 +70,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { irsaliyeYazdırToolStripMenuItem, irsaliyeGeçmişiToolStripMenuItem, müşterilerToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1264, 24);
+            menuStrip1.Size = new Size(2226, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -97,14 +97,14 @@
             // kurumsalMüşteriToolStripMenuItem
             // 
             kurumsalMüşteriToolStripMenuItem.Name = "kurumsalMüşteriToolStripMenuItem";
-            kurumsalMüşteriToolStripMenuItem.Size = new Size(180, 22);
+            kurumsalMüşteriToolStripMenuItem.Size = new Size(167, 22);
             kurumsalMüşteriToolStripMenuItem.Text = "Kurumsal Müşteri";
             kurumsalMüşteriToolStripMenuItem.Click += kurumsalMüşteriToolStripMenuItem_Click;
             // 
             // bireyselMüşteriToolStripMenuItem
             // 
             bireyselMüşteriToolStripMenuItem.Name = "bireyselMüşteriToolStripMenuItem";
-            bireyselMüşteriToolStripMenuItem.Size = new Size(180, 22);
+            bireyselMüşteriToolStripMenuItem.Size = new Size(167, 22);
             bireyselMüşteriToolStripMenuItem.Text = "Bireysel Müşteri";
             bireyselMüşteriToolStripMenuItem.Click += bireyselMüşteriToolStripMenuItem_Click;
             // 
@@ -260,7 +260,7 @@
             grbKurumsal.Controls.Add(label4);
             grbKurumsal.Controls.Add(label5);
             grbKurumsal.Controls.Add(label6);
-            grbKurumsal.Location = new Point(195, 75);
+            grbKurumsal.Location = new Point(1189, 80);
             grbKurumsal.Name = "grbKurumsal";
             grbKurumsal.Size = new Size(999, 589);
             grbKurumsal.TabIndex = 26;
@@ -368,7 +368,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1264, 681);
+            ClientSize = new Size(2226, 681);
             Controls.Add(grbKurumsal);
             Controls.Add(btnKurumsal);
             Controls.Add(btnBireysel);

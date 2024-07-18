@@ -55,7 +55,7 @@ namespace ProjectIU
                     {
                         Address = address,
                         Phone = phoneNumber,
-                        CompanyName = name
+                        Name = name
                     };
                     _corporateCustomerServices.Add(corporateCustomer);
                     KurumEkle();
