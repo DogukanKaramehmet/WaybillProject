@@ -60,6 +60,7 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
+            btnRefres = new Button();
             menuStrip1.SuspendLayout();
             grbBireysel.SuspendLayout();
             grbKurumsal.SuspendLayout();
@@ -177,6 +178,7 @@
             btnBireyselYazdir.TabIndex = 23;
             btnBireyselYazdir.Text = "Yazdır";
             btnBireyselYazdir.UseVisualStyleBackColor = true;
+            btnBireyselYazdir.Click += btnBireyselYazdir_Click;
             // 
             // txtBireyselFiyat
             // 
@@ -294,6 +296,7 @@
             btnKurumYazdir.TabIndex = 23;
             btnKurumYazdir.Text = "Yazdır";
             btnKurumYazdir.UseVisualStyleBackColor = true;
+            btnKurumYazdir.Click += btnKurumYazdir_Click;
             // 
             // txtKurumFiyat
             // 
@@ -364,11 +367,23 @@
             label6.TabIndex = 15;
             label6.Text = "Açıklama";
             // 
+            // btnRefres
+            // 
+            btnRefres.Font = new Font("Segoe UI", 15F);
+            btnRefres.Location = new Point(7, 283);
+            btnRefres.Name = "btnRefres";
+            btnRefres.Size = new Size(160, 75);
+            btnRefres.TabIndex = 27;
+            btnRefres.Text = "Sayfa Yenile";
+            btnRefres.UseVisualStyleBackColor = true;
+            btnRefres.Click += btnRefres_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(2226, 681);
+            Controls.Add(btnRefres);
             Controls.Add(grbKurumsal);
             Controls.Add(btnKurumsal);
             Controls.Add(btnBireysel);
@@ -423,5 +438,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
+        private Button btnRefres;
     }
 }

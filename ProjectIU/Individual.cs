@@ -37,6 +37,11 @@ namespace ProjectIU
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            Added();
+        }
+
+        private void Added()
+        {
             try
             {
                 string name = txtName.Text;

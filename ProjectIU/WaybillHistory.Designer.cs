@@ -31,6 +31,7 @@
             dgwWaybillHistory = new DataGridView();
             txtSearch = new TextBox();
             lblSearch = new Label();
+            btnYazdir = new Button();
             ((System.ComponentModel.ISupportInitialize)dgwWaybillHistory).BeginInit();
             SuspendLayout();
             // 
@@ -41,6 +42,7 @@
             dgwWaybillHistory.Name = "dgwWaybillHistory";
             dgwWaybillHistory.Size = new Size(1240, 463);
             dgwWaybillHistory.TabIndex = 2;
+            dgwWaybillHistory.CellClick += dgwWaybillHistory_CellClick;
             // 
             // txtSearch
             // 
@@ -60,11 +62,23 @@
             lblSearch.TabIndex = 4;
             lblSearch.Text = "Ara";
             // 
+            // btnYazdir
+            // 
+            btnYazdir.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            btnYazdir.Location = new Point(357, 106);
+            btnYazdir.Name = "btnYazdir";
+            btnYazdir.Size = new Size(150, 50);
+            btnYazdir.TabIndex = 5;
+            btnYazdir.Text = "YAZDIR";
+            btnYazdir.UseVisualStyleBackColor = true;
+            btnYazdir.Click += btnYazdir_Click;
+            // 
             // WaybillHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1264, 681);
+            Controls.Add(btnYazdir);
             Controls.Add(lblSearch);
             Controls.Add(txtSearch);
             Controls.Add(dgwWaybillHistory);
@@ -81,5 +95,6 @@
         private DataGridView dgwWaybillHistory;
         private TextBox txtSearch;
         private Label lblSearch;
+        private Button btnYazdir;
     }
 }
