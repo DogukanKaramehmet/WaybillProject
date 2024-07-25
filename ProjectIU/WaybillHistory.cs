@@ -3,6 +3,7 @@ using Business.Concrete;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using Entity.Concrete;
+using Entity.DTOs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,13 +41,18 @@ namespace ProjectIU
 
         private void DataLoad()
         {
-            List<Waybill> waybills = _waybillService.getAll();
+            List<WaybillDetailDto> waybills = _waybillService.GetWaybillDetails();
             var waybillList = waybills.Select(w => new
             {
                 Tarih = w.Date,
                 Fiyat = w.Amount,
                 Teknisyen = w.Technician,
-                Açıklama = w.Description
+                Açıklama = w.Description,
+                Adi=w.Name,
+                Soyadi=w.Surname,
+                Tel=w.Phone,
+                Adress=w.Address
+
             }).ToList();
 
             dgwWaybillHistory.DataSource = waybillList;
@@ -62,18 +68,26 @@ namespace ProjectIU
 
                 // Satırdaki verileri al
 
+                string customerName = selectedRow.Cells["Adi"].Value.ToString();
+                string customerSurname = selectedRow.Cells["Soyadi"].Value.ToString();  // Added
+                string phoneNumber = selectedRow.Cells["Tel"].Value.ToString();
                 DateTime date = DateTime.Parse(selectedRow.Cells["Tarih"].Value.ToString());
-                decimal? amount = selectedRow.Cells["Fiyat"].Value as decimal?;
+                decimal amount = decimal.Parse(selectedRow.Cells["Fiyat"].Value.ToString());
                 string technician = selectedRow.Cells["Teknisyen"].Value.ToString();
                 string description = selectedRow.Cells["Açıklama"].Value.ToString();
+                string address = selectedRow.Cells["Adress"].Value.ToString();
+
 
 
                 // Bilgileri ekrana yazdır
                 MessageBox.Show(
+                $"Müşteri Adı: {customerName} {customerSurname}\n" + // Combined name and surname
+                $"Telefon: {phoneNumber}\n" +
                 $"Tarih: {date.ToShortDateString()}\n" +
                 $"Fiyat: {amount}\n" +
                 $"Teknisyen: {technician}\n" +
-                $"Açıklama: {description}");
+                $"Açıklama: {description}\n" +
+                $"Adres: {address}");
             }
             else
             {

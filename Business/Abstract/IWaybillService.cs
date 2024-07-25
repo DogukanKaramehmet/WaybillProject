@@ -1,4 +1,5 @@
 ﻿using Entity.Concrete;
+using Entity.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Business.Abstract
     public interface IWaybillService
     {
         List<Waybill> getAll();
+        List<WaybillDetailDto> GetWaybillDetails();
         List<Waybill> get(int id);
         void Add(Waybill waybill);
         void Delete(Waybill waybill);

@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entity.Concrete;
+using Entity.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,11 @@ namespace Business.Concrete
         public List<Waybill> getAll()
         {
             return _waybill.GetAll();
+        }
+
+        public List<WaybillDetailDto> GetWaybillDetails()
+        {
+            return _waybill.GetWaybillDetails();
         }
 
         public void Update(Waybill waybill)
