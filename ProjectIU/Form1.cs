@@ -53,7 +53,7 @@ namespace ProjectIU
 
             IndividualLoadCombo();
             CorporateLoadCombo();
-            
+
 
         }
 
@@ -63,9 +63,20 @@ namespace ProjectIU
             {
                 List<IndividualCustomer> customers = _ýndividualCustomerServices.getall();
 
+                // ComboBox için otomatik tamamlama özelliklerini ayarla
+                cmbBireyselSec.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cmbBireyselSec.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+                // AutoComplete için veri kaynaðý ayarla
+                AutoCompleteStringCollection autoCompleteData = new AutoCompleteStringCollection();
+                autoCompleteData.AddRange(customers.Select(c => c.Name).ToArray());
+
+                cmbBireyselSec.AutoCompleteCustomSource = autoCompleteData;
+
                 cmbBireyselSec.DataSource = customers;
                 cmbBireyselSec.DisplayMember = "Name";
                 cmbBireyselSec.ValueMember = "IndividualCustomerId";
+                cmbBireyselSec.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -80,9 +91,20 @@ namespace ProjectIU
             {
                 List<CorporateCustomer> customers = _corporateCustomerServices.getall();
 
+                // ComboBox için otomatik tamamlama özelliklerini ayarla
+                cmbKurum.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                cmbKurum.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+                // AutoComplete için veri kaynaðý ayarla
+                AutoCompleteStringCollection autoCompleteData = new AutoCompleteStringCollection();
+                autoCompleteData.AddRange(customers.Select(c => c.Name).ToArray());
+
+                cmbKurum.AutoCompleteCustomSource = autoCompleteData;
+
                 cmbKurum.DataSource = customers;
                 cmbKurum.DisplayMember = "Name";
                 cmbKurum.ValueMember = "CorporateCustomerId";
+                cmbKurum.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -108,6 +130,12 @@ namespace ProjectIU
         {
             Corporate corporateCustomer = new Corporate();
             corporateCustomer.Show();
+        }
+
+        private void tümMüþterilerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AllCorporate allCorporate = new AllCorporate();
+            allCorporate.Show();
         }
 
         private void btnRefres_Click(object sender, EventArgs e)
@@ -196,5 +224,6 @@ namespace ProjectIU
                 MessageBox.Show($"Hata oluþtu: {ex.Message}");
             }
         }
+
     }
 }

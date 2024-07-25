@@ -34,6 +34,7 @@
             müşterilerToolStripMenuItem = new ToolStripMenuItem();
             kurumsalMüşteriToolStripMenuItem = new ToolStripMenuItem();
             bireyselMüşteriToolStripMenuItem = new ToolStripMenuItem();
+            tümMüşterilerToolStripMenuItem = new ToolStripMenuItem();
             btnBireysel = new Button();
             btnKurumsal = new Button();
             grbBireysel = new GroupBox();
@@ -77,41 +78,51 @@
             // 
             // irsaliyeYazdırToolStripMenuItem
             // 
+            irsaliyeYazdırToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             irsaliyeYazdırToolStripMenuItem.Name = "irsaliyeYazdırToolStripMenuItem";
-            irsaliyeYazdırToolStripMenuItem.Size = new Size(89, 20);
+            irsaliyeYazdırToolStripMenuItem.Size = new Size(94, 20);
             irsaliyeYazdırToolStripMenuItem.Text = "İrsaliye Yazdır";
             // 
             // irsaliyeGeçmişiToolStripMenuItem
             // 
+            irsaliyeGeçmişiToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             irsaliyeGeçmişiToolStripMenuItem.Name = "irsaliyeGeçmişiToolStripMenuItem";
-            irsaliyeGeçmişiToolStripMenuItem.Size = new Size(100, 20);
+            irsaliyeGeçmişiToolStripMenuItem.Size = new Size(105, 20);
             irsaliyeGeçmişiToolStripMenuItem.Text = "İrsaliye Geçmişi";
             irsaliyeGeçmişiToolStripMenuItem.Click += irsaliyeGeçmişiToolStripMenuItem_Click;
             // 
             // müşterilerToolStripMenuItem
             // 
-            müşterilerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { kurumsalMüşteriToolStripMenuItem, bireyselMüşteriToolStripMenuItem });
+            müşterilerToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { kurumsalMüşteriToolStripMenuItem, bireyselMüşteriToolStripMenuItem, tümMüşterilerToolStripMenuItem });
+            müşterilerToolStripMenuItem.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             müşterilerToolStripMenuItem.Name = "müşterilerToolStripMenuItem";
-            müşterilerToolStripMenuItem.Size = new Size(72, 20);
+            müşterilerToolStripMenuItem.Size = new Size(77, 20);
             müşterilerToolStripMenuItem.Text = "Müşteriler";
             // 
             // kurumsalMüşteriToolStripMenuItem
             // 
             kurumsalMüşteriToolStripMenuItem.Name = "kurumsalMüşteriToolStripMenuItem";
-            kurumsalMüşteriToolStripMenuItem.Size = new Size(167, 22);
+            kurumsalMüşteriToolStripMenuItem.Size = new Size(172, 22);
             kurumsalMüşteriToolStripMenuItem.Text = "Kurumsal Müşteri";
             kurumsalMüşteriToolStripMenuItem.Click += kurumsalMüşteriToolStripMenuItem_Click;
             // 
             // bireyselMüşteriToolStripMenuItem
             // 
             bireyselMüşteriToolStripMenuItem.Name = "bireyselMüşteriToolStripMenuItem";
-            bireyselMüşteriToolStripMenuItem.Size = new Size(167, 22);
+            bireyselMüşteriToolStripMenuItem.Size = new Size(172, 22);
             bireyselMüşteriToolStripMenuItem.Text = "Bireysel Müşteri";
             bireyselMüşteriToolStripMenuItem.Click += bireyselMüşteriToolStripMenuItem_Click;
             // 
+            // tümMüşterilerToolStripMenuItem
+            // 
+            tümMüşterilerToolStripMenuItem.Name = "tümMüşterilerToolStripMenuItem";
+            tümMüşterilerToolStripMenuItem.Size = new Size(172, 22);
+            tümMüşterilerToolStripMenuItem.Text = "Tüm Müşteriler";
+            tümMüşterilerToolStripMenuItem.Click += tümMüşterilerToolStripMenuItem_Click;
+            // 
             // btnBireysel
             // 
-            btnBireysel.Font = new Font("Segoe UI", 15F);
+            btnBireysel.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnBireysel.Location = new Point(7, 103);
             btnBireysel.Name = "btnBireysel";
             btnBireysel.Size = new Size(160, 75);
@@ -122,7 +133,7 @@
             // 
             // btnKurumsal
             // 
-            btnKurumsal.Font = new Font("Segoe UI", 15F);
+            btnKurumsal.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnKurumsal.Location = new Point(7, 197);
             btnKurumsal.Name = "btnKurumsal";
             btnKurumsal.Size = new Size(160, 75);
@@ -144,6 +155,7 @@
             grbBireysel.Controls.Add(lblTechnician);
             grbBireysel.Controls.Add(lblDate);
             grbBireysel.Controls.Add(lblDescription);
+            grbBireysel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             grbBireysel.Location = new Point(195, 75);
             grbBireysel.Name = "grbBireysel";
             grbBireysel.Size = new Size(988, 578);
@@ -154,10 +166,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F);
+            label1.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             label1.Location = new Point(148, 18);
             label1.Name = "label1";
-            label1.Size = new Size(113, 28);
+            label1.Size = new Size(123, 28);
             label1.TabIndex = 25;
             label1.Text = "Müşteri Seç";
             // 
@@ -171,7 +183,7 @@
             // 
             // btnBireyselYazdir
             // 
-            btnBireyselYazdir.Font = new Font("Segoe UI", 15F);
+            btnBireyselYazdir.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnBireyselYazdir.Location = new Point(660, 482);
             btnBireyselYazdir.Name = "btnBireyselYazdir";
             btnBireyselYazdir.Size = new Size(160, 75);
@@ -212,40 +224,40 @@
             // lblAmount
             // 
             lblAmount.AutoSize = true;
-            lblAmount.Font = new Font("Segoe UI", 15F);
+            lblAmount.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             lblAmount.Location = new Point(635, 381);
             lblAmount.Name = "lblAmount";
-            lblAmount.Size = new Size(54, 28);
+            lblAmount.Size = new Size(58, 28);
             lblAmount.TabIndex = 18;
             lblAmount.Text = "Fiyat";
             // 
             // lblTechnician
             // 
             lblTechnician.AutoSize = true;
-            lblTechnician.Font = new Font("Segoe UI", 15F);
+            lblTechnician.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             lblTechnician.Location = new Point(636, 132);
             lblTechnician.Name = "lblTechnician";
-            lblTechnician.Size = new Size(95, 28);
+            lblTechnician.Size = new Size(105, 28);
             lblTechnician.TabIndex = 17;
             lblTechnician.Text = "Teknisyen";
             // 
             // lblDate
             // 
             lblDate.AutoSize = true;
-            lblDate.Font = new Font("Segoe UI", 15F);
+            lblDate.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             lblDate.Location = new Point(636, 255);
             lblDate.Name = "lblDate";
-            lblDate.Size = new Size(53, 28);
+            lblDate.Size = new Size(59, 28);
             lblDate.TabIndex = 16;
             lblDate.Text = "Tarih";
             // 
             // lblDescription
             // 
             lblDescription.AutoSize = true;
-            lblDescription.Font = new Font("Segoe UI", 15F);
+            lblDescription.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             lblDescription.Location = new Point(148, 109);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(91, 28);
+            lblDescription.Size = new Size(99, 28);
             lblDescription.TabIndex = 15;
             lblDescription.Text = "Açıklama";
             // 
@@ -262,6 +274,7 @@
             grbKurumsal.Controls.Add(label4);
             grbKurumsal.Controls.Add(label5);
             grbKurumsal.Controls.Add(label6);
+            grbKurumsal.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             grbKurumsal.Location = new Point(1189, 80);
             grbKurumsal.Name = "grbKurumsal";
             grbKurumsal.Size = new Size(999, 589);
@@ -272,10 +285,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15F);
+            label2.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             label2.Location = new Point(148, 18);
             label2.Name = "label2";
-            label2.Size = new Size(105, 28);
+            label2.Size = new Size(113, 28);
             label2.TabIndex = 25;
             label2.Text = "Kurum Seç";
             // 
@@ -289,7 +302,7 @@
             // 
             // btnKurumYazdir
             // 
-            btnKurumYazdir.Font = new Font("Segoe UI", 15F);
+            btnKurumYazdir.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnKurumYazdir.Location = new Point(660, 482);
             btnKurumYazdir.Name = "btnKurumYazdir";
             btnKurumYazdir.Size = new Size(160, 75);
@@ -330,46 +343,46 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15F);
+            label3.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             label3.Location = new Point(635, 381);
             label3.Name = "label3";
-            label3.Size = new Size(54, 28);
+            label3.Size = new Size(58, 28);
             label3.TabIndex = 18;
             label3.Text = "Fiyat";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 15F);
+            label4.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             label4.Location = new Point(636, 132);
             label4.Name = "label4";
-            label4.Size = new Size(95, 28);
+            label4.Size = new Size(105, 28);
             label4.TabIndex = 17;
             label4.Text = "Teknisyen";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 15F);
+            label5.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             label5.Location = new Point(636, 255);
             label5.Name = "label5";
-            label5.Size = new Size(53, 28);
+            label5.Size = new Size(59, 28);
             label5.TabIndex = 16;
             label5.Text = "Tarih";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 15F);
+            label6.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             label6.Location = new Point(148, 109);
             label6.Name = "label6";
-            label6.Size = new Size(91, 28);
+            label6.Size = new Size(99, 28);
             label6.TabIndex = 15;
             label6.Text = "Açıklama";
             // 
             // btnRefres
             // 
-            btnRefres.Font = new Font("Segoe UI", 15F);
+            btnRefres.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnRefres.Location = new Point(7, 283);
             btnRefres.Name = "btnRefres";
             btnRefres.Size = new Size(160, 75);
@@ -389,6 +402,7 @@
             Controls.Add(btnBireysel);
             Controls.Add(grbBireysel);
             Controls.Add(menuStrip1);
+            Font = new Font("Segoe UI", 9F);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
@@ -439,5 +453,6 @@
         private Label label5;
         private Label label6;
         private Button btnRefres;
+        private ToolStripMenuItem tümMüşterilerToolStripMenuItem;
     }
 }

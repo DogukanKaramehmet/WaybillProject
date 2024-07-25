@@ -39,7 +39,7 @@
             // 
             // btnAdd
             // 
-            btnAdd.Font = new Font("Segoe UI", 20F);
+            btnAdd.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             btnAdd.Location = new Point(40, 354);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(200, 86);
@@ -60,10 +60,10 @@
             // lblAddress
             // 
             lblAddress.AutoSize = true;
-            lblAddress.Font = new Font("Segoe UI", 20F);
+            lblAddress.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblAddress.Location = new Point(292, 53);
             lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(84, 37);
+            lblAddress.Size = new Size(91, 37);
             lblAddress.TabIndex = 15;
             lblAddress.Text = "Adres";
             // 
@@ -78,10 +78,10 @@
             // lblPohneNumber
             // 
             lblPohneNumber.AutoSize = true;
-            lblPohneNumber.Font = new Font("Segoe UI", 20F);
+            lblPohneNumber.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblPohneNumber.Location = new Point(40, 147);
             lblPohneNumber.Name = "lblPohneNumber";
-            lblPohneNumber.Size = new Size(102, 37);
+            lblPohneNumber.Size = new Size(112, 37);
             lblPohneNumber.TabIndex = 13;
             lblPohneNumber.Text = "Telefon";
             // 
@@ -96,10 +96,10 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Font = new Font("Segoe UI", 20F);
+            lblName.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblName.Location = new Point(40, 53);
             lblName.Name = "lblName";
-            lblName.Size = new Size(150, 37);
+            lblName.Size = new Size(164, 37);
             lblName.TabIndex = 9;
             lblName.Text = "Kurum İsmi";
             // 

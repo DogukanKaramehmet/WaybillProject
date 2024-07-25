@@ -42,10 +42,10 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Font = new Font("Segoe UI", 20F);
+            lblName.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblName.Location = new Point(59, 83);
             lblName.Name = "lblName";
-            lblName.Size = new Size(57, 37);
+            lblName.Size = new Size(61, 37);
             lblName.TabIndex = 0;
             lblName.Text = "Adı";
             // 
@@ -68,10 +68,10 @@
             // lblSurname
             // 
             lblSurname.AutoSize = true;
-            lblSurname.Font = new Font("Segoe UI", 20F);
+            lblSurname.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblSurname.Location = new Point(59, 169);
             lblSurname.Name = "lblSurname";
-            lblSurname.Size = new Size(97, 37);
+            lblSurname.Size = new Size(104, 37);
             lblSurname.TabIndex = 2;
             lblSurname.Text = "Soyadı";
             // 
@@ -86,10 +86,10 @@
             // lblPohneNumber
             // 
             lblPohneNumber.AutoSize = true;
-            lblPohneNumber.Font = new Font("Segoe UI", 20F);
+            lblPohneNumber.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblPohneNumber.Location = new Point(59, 255);
             lblPohneNumber.Name = "lblPohneNumber";
-            lblPohneNumber.Size = new Size(102, 37);
+            lblPohneNumber.Size = new Size(112, 37);
             lblPohneNumber.TabIndex = 4;
             lblPohneNumber.Text = "Telefon";
             // 
@@ -105,16 +105,16 @@
             // lblAddress
             // 
             lblAddress.AutoSize = true;
-            lblAddress.Font = new Font("Segoe UI", 20F);
+            lblAddress.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             lblAddress.Location = new Point(311, 83);
             lblAddress.Name = "lblAddress";
-            lblAddress.Size = new Size(84, 37);
+            lblAddress.Size = new Size(91, 37);
             lblAddress.TabIndex = 6;
             lblAddress.Text = "Adres";
             // 
             // btnAdd
             // 
-            btnAdd.Font = new Font("Segoe UI", 20F);
+            btnAdd.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
             btnAdd.Location = new Point(59, 384);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(200, 86);
@@ -123,7 +123,7 @@
             btnAdd.UseVisualStyleBackColor = true;
             btnAdd.Click += btnAdd_Click;
             // 
-            // IndividualCustomer
+            // Individual
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -137,7 +137,7 @@
             Controls.Add(lblSurname);
             Controls.Add(txtName);
             Controls.Add(lblName);
-            Name = "IndividualCustomer";
+            Name = "Individual";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Bireysel Müşteri";
             Load += IndividualCustomer_Load;

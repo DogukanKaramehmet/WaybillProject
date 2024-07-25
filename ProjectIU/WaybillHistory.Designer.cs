@@ -51,14 +51,15 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(227, 34);
             txtSearch.TabIndex = 3;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // lblSearch
             // 
             lblSearch.AutoSize = true;
-            lblSearch.Font = new Font("Segoe UI", 15F);
+            lblSearch.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             lblSearch.Location = new Point(72, 77);
             lblSearch.Name = "lblSearch";
-            lblSearch.Size = new Size(42, 28);
+            lblSearch.Size = new Size(45, 28);
             lblSearch.TabIndex = 4;
             lblSearch.Text = "Ara";
             // 

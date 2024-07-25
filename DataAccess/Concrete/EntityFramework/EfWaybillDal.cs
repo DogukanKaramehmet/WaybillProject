@@ -18,6 +18,7 @@ namespace DataAccess.Concrete.EntityFramework
                 var result = from v in context.Waybills
                              join ı in context.IndividualCustomers
                              on v.IndividualCustomerId equals ı.IndividualCustomerId
+                             
                              select new WaybillDetailDto
                              {
                                  WaybillId = v.WaybillId,

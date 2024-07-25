@@ -48,10 +48,10 @@ namespace ProjectIU
                 Fiyat = w.Amount,
                 Teknisyen = w.Technician,
                 Açıklama = w.Description,
-                Adi=w.Name,
-                Soyadi=w.Surname,
-                Tel=w.Phone,
-                Adress=w.Address
+                Adi = w.Name,
+                Soyadi = w.Surname,
+                Tel = w.Phone,
+                Adress = w.Address
 
             }).ToList();
 
@@ -69,7 +69,7 @@ namespace ProjectIU
                 // Satırdaki verileri al
 
                 string customerName = selectedRow.Cells["Adi"].Value.ToString();
-                string customerSurname = selectedRow.Cells["Soyadi"].Value.ToString();  // Added
+                string customerSurname = selectedRow.Cells["Soyadi"].Value.ToString();  
                 string phoneNumber = selectedRow.Cells["Tel"].Value.ToString();
                 DateTime date = DateTime.Parse(selectedRow.Cells["Tarih"].Value.ToString());
                 decimal amount = decimal.Parse(selectedRow.Cells["Fiyat"].Value.ToString());
@@ -81,7 +81,7 @@ namespace ProjectIU
 
                 // Bilgileri ekrana yazdır
                 MessageBox.Show(
-                $"Müşteri Adı: {customerName} {customerSurname}\n" + // Combined name and surname
+                $"Müşteri Adı: {customerName} {customerSurname}\n" + 
                 $"Telefon: {phoneNumber}\n" +
                 $"Tarih: {date.ToShortDateString()}\n" +
                 $"Fiyat: {amount}\n" +
@@ -100,6 +100,22 @@ namespace ProjectIU
             if (e.RowIndex >= 0)
             {
                 dgwWaybillHistory.Rows[e.RowIndex].Selected = true;
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string serchValue = txtSearch.Text.Trim().ToLower();
+
+            if (!string.IsNullOrEmpty(serchValue))
+            {
+                dgwWaybillHistory.DataSource = _waybillService.GetWaybillDetails().Where(c =>
+                c.Name.ToLower().Contains(serchValue) ||
+                c.Surname.ToLower().Contains(serchValue)).ToList();
+            }
+            else
+            {
+                dgwWaybillHistory.DataSource = _waybillService.GetWaybillDetails();
             }
         }
     }
