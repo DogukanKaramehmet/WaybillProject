@@ -49,10 +49,10 @@ namespace ProjectIU
                 Teknisyen = w.Technician,
                 Açıklama = w.Description,
                 Adi = w.Name,
-                Soyadi = w.Surname,
+                Soyadi = w.IsCorporate ? "-" : w.Surname, // Kurumsal müşteri ise boş bırak
                 Tel = w.Phone,
-                Adress = w.Address
-
+                Adres = w.Address,
+                MüşteriTipi = w.IsCorporate ? "Kurumsal" : "Bireysel" // Müşteri tipi belirt
             }).ToList();
 
             dgwWaybillHistory.DataSource = waybillList;
@@ -67,27 +67,27 @@ namespace ProjectIU
                 DataGridViewRow selectedRow = dgwWaybillHistory.SelectedRows[0];
 
                 // Satırdaki verileri al
-
                 string customerName = selectedRow.Cells["Adi"].Value.ToString();
-                string customerSurname = selectedRow.Cells["Soyadi"].Value.ToString();  
+                string customerSurname = selectedRow.Cells["Soyadi"].Value.ToString();
                 string phoneNumber = selectedRow.Cells["Tel"].Value.ToString();
                 DateTime date = DateTime.Parse(selectedRow.Cells["Tarih"].Value.ToString());
                 decimal amount = decimal.Parse(selectedRow.Cells["Fiyat"].Value.ToString());
                 string technician = selectedRow.Cells["Teknisyen"].Value.ToString();
                 string description = selectedRow.Cells["Açıklama"].Value.ToString();
-                string address = selectedRow.Cells["Adress"].Value.ToString();
-
-
+                string address = selectedRow.Cells["Adres"].Value.ToString();
+                string customerType = selectedRow.Cells["MüşteriTipi"].Value.ToString();
 
                 // Bilgileri ekrana yazdır
                 MessageBox.Show(
-                $"Müşteri Adı: {customerName} {customerSurname}\n" + 
-                $"Telefon: {phoneNumber}\n" +
-                $"Tarih: {date.ToShortDateString()}\n" +
-                $"Fiyat: {amount}\n" +
-                $"Teknisyen: {technician}\n" +
-                $"Açıklama: {description}\n" +
-                $"Adres: {address}");
+                    $"Müşteri Tipi: {customerType}\n" +
+                    $"Müşteri Adı: {customerName} {(customerType == "Bireysel" ? customerSurname : "")}\n" +
+                    $"Telefon: {phoneNumber}\n" +
+                    $"Tarih: {date.ToShortDateString()}\n" +
+                    $"Fiyat: {amount}\n" +
+                    $"Teknisyen: {technician}\n" +
+                    $"Açıklama: {description}\n" +
+                    $"Adres: {address}"
+                );
             }
             else
             {
@@ -105,17 +105,31 @@ namespace ProjectIU
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string serchValue = txtSearch.Text.Trim().ToLower();
+            string searchValue = txtSearch.Text.Trim().ToLower();
 
-            if (!string.IsNullOrEmpty(serchValue))
+            if (!string.IsNullOrEmpty(searchValue))
             {
-                dgwWaybillHistory.DataSource = _waybillService.GetWaybillDetails().Where(c =>
-                c.Name.ToLower().Contains(serchValue) ||
-                c.Surname.ToLower().Contains(serchValue)).ToList();
+                var filteredWaybills = _waybillService.GetWaybillDetails().Where(c =>
+                    c.Name.ToLower().Contains(searchValue) ||
+                    (!c.IsCorporate && c.Surname.ToLower().Contains(searchValue)) // Bireysel müşteriler için soyadı araması
+                ).ToList();
+
+                dgwWaybillHistory.DataSource = filteredWaybills.Select(w => new
+                {
+                    Tarih = w.Date,
+                    Fiyat = w.Amount,
+                    Teknisyen = w.Technician,
+                    Açıklama = w.Description,
+                    Adi = w.Name,
+                    Soyadi = w.IsCorporate ? "-" : w.Surname,
+                    Tel = w.Phone,
+                    Adres = w.Address,
+                    MüşteriTipi = w.IsCorporate ? "Kurumsal" : "Bireysel"
+                }).ToList();
             }
             else
             {
-                dgwWaybillHistory.DataSource = _waybillService.GetWaybillDetails();
+                DataLoad(); // Filtreleme yoksa, tüm verileri yükleyin
             }
         }
     }

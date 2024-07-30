@@ -15,25 +15,46 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (WaybillContext context = new WaybillContext())
             {
-                var result = from v in context.Waybills
-                             join ı in context.IndividualCustomers
-                             on v.IndividualCustomerId equals ı.IndividualCustomerId
-                             
-                             select new WaybillDetailDto
-                             {
-                                 WaybillId = v.WaybillId,
-                                 Amount = v.Amount,
-                                 Description = v.Description,
-                                 Technician = v.Technician,
-                                 Date = v.Date,
-                                 Name = ı.Name,
-                                 Surname = ı.Surname,
-                                 Phone = ı.Phone,
-                                 Address= ı.Address
-                                 
-                             };
+                var individualResults = from v in context.Waybills
+                                        join i in context.IndividualCustomers
+                                        on v.IndividualCustomerId equals i.IndividualCustomerId
+                                        where v.IndividualCustomerId != null // Bireysel müşteri verisi varsa
+                                        select new WaybillDetailDto
+                                        {
+                                            WaybillId = v.WaybillId,
+                                            Amount = v.Amount,
+                                            Description = v.Description,
+                                            Technician = v.Technician,
+                                            Date = v.Date,
+                                            Name = i.Name,
+                                            Surname = i.Surname,
+                                            Phone = i.Phone,
+                                            Address = i.Address,
+                                            IsCorporate = false // Bireysel müşteri
+                                        };
 
-                return result.ToList();
+                var corporateResults = from v in context.Waybills
+                                       join c in context.CorporateCustomers
+                                       on v.CorporateCustomerId equals c.CorporateCustomerId
+                                       where v.CorporateCustomerId != null // Kurumsal müşteri verisi varsa
+                                       select new WaybillDetailDto
+                                       {
+                                           WaybillId = v.WaybillId,
+                                           Amount = v.Amount,
+                                           Description = v.Description,
+                                           Technician = v.Technician,
+                                           Date = v.Date,
+                                           Name = c.Name, 
+                                           Surname = null, // Kurumsal müşteri olduğu için boş bırakabiliriz
+                                           Phone = c.Phone,
+                                           Address = c.Address,
+                                           IsCorporate = true // Kurumsal müşteri
+                                       };
+
+                // İki sonucu birleştir
+                var result = individualResults.Union(corporateResults).ToList();
+
+                return result;
             }
         }
     }

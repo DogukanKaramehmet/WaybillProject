@@ -32,6 +32,8 @@
             txtSearch = new TextBox();
             lblSerach = new Label();
             btnDelete = new Button();
+            btnIndividual = new Button();
+            btnCorporate = new Button();
             ((System.ComponentModel.ISupportInitialize)dgwCorporate).BeginInit();
             SuspendLayout();
             // 
@@ -74,11 +76,35 @@
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
             // 
+            // btnIndividual
+            // 
+            btnIndividual.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            btnIndividual.Location = new Point(325, 26);
+            btnIndividual.Name = "btnIndividual";
+            btnIndividual.Size = new Size(120, 50);
+            btnIndividual.TabIndex = 4;
+            btnIndividual.Text = "Bireysel";
+            btnIndividual.UseVisualStyleBackColor = true;
+            btnIndividual.Click += btnIndividual_Click;
+            // 
+            // btnCorporate
+            // 
+            btnCorporate.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            btnCorporate.Location = new Point(451, 26);
+            btnCorporate.Name = "btnCorporate";
+            btnCorporate.Size = new Size(120, 50);
+            btnCorporate.TabIndex = 5;
+            btnCorporate.Text = "Kurumsal";
+            btnCorporate.UseVisualStyleBackColor = true;
+            btnCorporate.Click += btnCorporate_Click;
+            // 
             // AllCorporate
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(784, 561);
+            Controls.Add(btnCorporate);
+            Controls.Add(btnIndividual);
             Controls.Add(btnDelete);
             Controls.Add(lblSerach);
             Controls.Add(txtSearch);
@@ -97,5 +123,7 @@
         private TextBox txtSearch;
         private Label lblSerach;
         private Button btnDelete;
+        private Button btnIndividual;
+        private Button btnCorporate;
     }
 }

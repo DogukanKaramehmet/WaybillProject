@@ -18,5 +18,6 @@ namespace Entity.DTOs
         public string Surname { get; set; }
         public Int64 Phone { get; set; }
         public string Address { get; set; }
+        public bool IsCorporate { get; set; } // Müşteri tipi belirlemek için ekleyelim
     }
 }
