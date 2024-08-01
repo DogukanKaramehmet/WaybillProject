@@ -32,22 +32,26 @@
             txtSearch = new TextBox();
             lblSearch = new Label();
             btnYazdir = new Button();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dgwWaybillHistory).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // dgwWaybillHistory
             // 
+            dgwWaybillHistory.BackgroundColor = Color.PaleTurquoise;
+            dgwWaybillHistory.BorderStyle = BorderStyle.None;
             dgwWaybillHistory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgwWaybillHistory.Location = new Point(12, 162);
+            dgwWaybillHistory.Location = new Point(0, 162);
             dgwWaybillHistory.Name = "dgwWaybillHistory";
-            dgwWaybillHistory.Size = new Size(1240, 463);
+            dgwWaybillHistory.Size = new Size(1264, 519);
             dgwWaybillHistory.TabIndex = 2;
             dgwWaybillHistory.CellClick += dgwWaybillHistory_CellClick;
             // 
             // txtSearch
             // 
             txtSearch.Font = new Font("Segoe UI", 15F);
-            txtSearch.Location = new Point(72, 122);
+            txtSearch.Location = new Point(91, 109);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(227, 34);
             txtSearch.TabIndex = 3;
@@ -57,7 +61,7 @@
             // 
             lblSearch.AutoSize = true;
             lblSearch.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            lblSearch.Location = new Point(72, 77);
+            lblSearch.Location = new Point(91, 64);
             lblSearch.Name = "lblSearch";
             lblSearch.Size = new Size(45, 28);
             lblSearch.TabIndex = 4;
@@ -65,31 +69,44 @@
             // 
             // btnYazdir
             // 
+            btnYazdir.BackColor = Color.LightSteelBlue;
+            btnYazdir.FlatStyle = FlatStyle.Popup;
             btnYazdir.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            btnYazdir.Location = new Point(357, 106);
+            btnYazdir.Location = new Point(376, 93);
             btnYazdir.Name = "btnYazdir";
             btnYazdir.Size = new Size(150, 50);
             btnYazdir.TabIndex = 5;
             btnYazdir.Text = "YAZDIR";
-            btnYazdir.UseVisualStyleBackColor = true;
+            btnYazdir.UseVisualStyleBackColor = false;
             btnYazdir.Click += btnYazdir_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.DeepSkyBlue;
+            panel1.Controls.Add(lblSearch);
+            panel1.Controls.Add(btnYazdir);
+            panel1.Controls.Add(txtSearch);
+            panel1.Location = new Point(0, -1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1264, 163);
+            panel1.TabIndex = 6;
             // 
             // WaybillHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1264, 681);
-            Controls.Add(btnYazdir);
-            Controls.Add(lblSearch);
-            Controls.Add(txtSearch);
+            Controls.Add(panel1);
             Controls.Add(dgwWaybillHistory);
+            ForeColor = Color.DarkBlue;
             Name = "WaybillHistory";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "İrsaliye Geçmişi";
             Load += WaybillHistory_Load;
             ((System.ComponentModel.ISupportInitialize)dgwWaybillHistory).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -97,5 +114,6 @@
         private TextBox txtSearch;
         private Label lblSearch;
         private Button btnYazdir;
+        private Panel panel1;
     }
 }

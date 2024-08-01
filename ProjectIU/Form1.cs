@@ -48,8 +48,8 @@ namespace ProjectIU
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //grbKurumsal.Visible = false;
-            //grbBireysel.Visible = false;
+            grbKurumsal.Visible = false;
+            grbBireysel.Visible = true;
 
             IndividualLoadCombo();
             CorporateLoadCombo();

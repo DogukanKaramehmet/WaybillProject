@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectIU", "ProjectIU\ProjectIU.csproj", "{D6145273-697A-4707-8212-B72AEC606A43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectIU", "ProjectIU\ProjectIU.csproj", "{D6145273-697A-4707-8212-B72AEC606A43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{2533A1A1-C27E-4B9D-85A7-26142322FB2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "Entity\Entity.csproj", "{2533A1A1-C27E-4B9D-85A7-26142322FB2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{2E851740-9326-4A69-B8DD-360E79E0EDB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{2E851740-9326-4A69-B8DD-360E79E0EDB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{DF049CF0-23C2-4650-9279-351D1545C7FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{DF049CF0-23C2-4650-9279-351D1545C7FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

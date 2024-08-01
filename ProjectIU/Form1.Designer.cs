@@ -35,8 +35,6 @@
             kurumsalMüşteriToolStripMenuItem = new ToolStripMenuItem();
             bireyselMüşteriToolStripMenuItem = new ToolStripMenuItem();
             tümMüşterilerToolStripMenuItem = new ToolStripMenuItem();
-            btnBireysel = new Button();
-            btnKurumsal = new Button();
             grbBireysel = new GroupBox();
             label1 = new Label();
             cmbBireyselSec = new ComboBox();
@@ -62,17 +60,23 @@
             label5 = new Label();
             label6 = new Label();
             btnRefres = new Button();
+            btnKurumsal = new Button();
+            btnBireysel = new Button();
+            panel1 = new Panel();
+            panel2 = new Panel();
             menuStrip1.SuspendLayout();
             grbBireysel.SuspendLayout();
             grbKurumsal.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.DeepSkyBlue;
             menuStrip1.Items.AddRange(new ToolStripItem[] { irsaliyeYazdırToolStripMenuItem, irsaliyeGeçmişiToolStripMenuItem, müşterilerToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(2226, 24);
+            menuStrip1.Size = new Size(1264, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -120,30 +124,9 @@
             tümMüşterilerToolStripMenuItem.Text = "Tüm Müşteriler";
             tümMüşterilerToolStripMenuItem.Click += tümMüşterilerToolStripMenuItem_Click;
             // 
-            // btnBireysel
-            // 
-            btnBireysel.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            btnBireysel.Location = new Point(7, 103);
-            btnBireysel.Name = "btnBireysel";
-            btnBireysel.Size = new Size(160, 75);
-            btnBireysel.TabIndex = 2;
-            btnBireysel.Text = "Bireysel\r\nİrsaliye\r\n";
-            btnBireysel.UseVisualStyleBackColor = true;
-            btnBireysel.Click += btnBireysel_Click;
-            // 
-            // btnKurumsal
-            // 
-            btnKurumsal.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            btnKurumsal.Location = new Point(7, 197);
-            btnKurumsal.Name = "btnKurumsal";
-            btnKurumsal.Size = new Size(160, 75);
-            btnKurumsal.TabIndex = 3;
-            btnKurumsal.Text = "Kurumsal \r\nİrsaliye";
-            btnKurumsal.UseVisualStyleBackColor = true;
-            btnKurumsal.Click += btnKurumsal_Click;
-            // 
             // grbBireysel
             // 
+            grbBireysel.BackColor = Color.PaleTurquoise;
             grbBireysel.Controls.Add(label1);
             grbBireysel.Controls.Add(cmbBireyselSec);
             grbBireysel.Controls.Add(btnBireyselYazdir);
@@ -158,7 +141,7 @@
             grbBireysel.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             grbBireysel.Location = new Point(195, 75);
             grbBireysel.Name = "grbBireysel";
-            grbBireysel.Size = new Size(988, 578);
+            grbBireysel.Size = new Size(1069, 624);
             grbBireysel.TabIndex = 1;
             grbBireysel.TabStop = false;
             grbBireysel.Text = "Bireysel İrsaliye";
@@ -183,13 +166,15 @@
             // 
             // btnBireyselYazdir
             // 
+            btnBireyselYazdir.BackColor = Color.LightSteelBlue;
+            btnBireyselYazdir.FlatStyle = FlatStyle.Popup;
             btnBireyselYazdir.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnBireyselYazdir.Location = new Point(660, 482);
             btnBireyselYazdir.Name = "btnBireyselYazdir";
             btnBireyselYazdir.Size = new Size(160, 75);
             btnBireyselYazdir.TabIndex = 23;
             btnBireyselYazdir.Text = "Yazdır";
-            btnBireyselYazdir.UseVisualStyleBackColor = true;
+            btnBireyselYazdir.UseVisualStyleBackColor = false;
             btnBireyselYazdir.Click += btnBireyselYazdir_Click;
             // 
             // txtBireyselFiyat
@@ -263,6 +248,7 @@
             // 
             // grbKurumsal
             // 
+            grbKurumsal.BackColor = Color.PaleTurquoise;
             grbKurumsal.Controls.Add(label2);
             grbKurumsal.Controls.Add(cmbKurum);
             grbKurumsal.Controls.Add(btnKurumYazdir);
@@ -275,9 +261,9 @@
             grbKurumsal.Controls.Add(label5);
             grbKurumsal.Controls.Add(label6);
             grbKurumsal.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            grbKurumsal.Location = new Point(1189, 80);
+            grbKurumsal.Location = new Point(195, 75);
             grbKurumsal.Name = "grbKurumsal";
-            grbKurumsal.Size = new Size(999, 589);
+            grbKurumsal.Size = new Size(1069, 624);
             grbKurumsal.TabIndex = 26;
             grbKurumsal.TabStop = false;
             grbKurumsal.Text = "Kurumsal İrsaliye";
@@ -302,13 +288,15 @@
             // 
             // btnKurumYazdir
             // 
+            btnKurumYazdir.BackColor = Color.LightSteelBlue;
+            btnKurumYazdir.FlatStyle = FlatStyle.Popup;
             btnKurumYazdir.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             btnKurumYazdir.Location = new Point(660, 482);
             btnKurumYazdir.Name = "btnKurumYazdir";
             btnKurumYazdir.Size = new Size(160, 75);
             btnKurumYazdir.TabIndex = 23;
             btnKurumYazdir.Text = "Yazdır";
-            btnKurumYazdir.UseVisualStyleBackColor = true;
+            btnKurumYazdir.UseVisualStyleBackColor = false;
             btnKurumYazdir.Click += btnKurumYazdir_Click;
             // 
             // txtKurumFiyat
@@ -382,27 +370,74 @@
             // 
             // btnRefres
             // 
+            btnRefres.BackColor = Color.LightSteelBlue;
+            btnRefres.FlatStyle = FlatStyle.Popup;
             btnRefres.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            btnRefres.Location = new Point(7, 283);
+            btnRefres.Location = new Point(12, 213);
             btnRefres.Name = "btnRefres";
             btnRefres.Size = new Size(160, 75);
             btnRefres.TabIndex = 27;
             btnRefres.Text = "Sayfa Yenile";
-            btnRefres.UseVisualStyleBackColor = true;
+            btnRefres.UseVisualStyleBackColor = false;
             btnRefres.Click += btnRefres_Click;
+            // 
+            // btnKurumsal
+            // 
+            btnKurumsal.BackColor = Color.LightSteelBlue;
+            btnKurumsal.FlatStyle = FlatStyle.Popup;
+            btnKurumsal.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            btnKurumsal.Location = new Point(12, 132);
+            btnKurumsal.Name = "btnKurumsal";
+            btnKurumsal.Size = new Size(160, 75);
+            btnKurumsal.TabIndex = 3;
+            btnKurumsal.Text = "Kurumsal \r\nİrsaliye";
+            btnKurumsal.UseVisualStyleBackColor = false;
+            btnKurumsal.Click += btnKurumsal_Click;
+            // 
+            // btnBireysel
+            // 
+            btnBireysel.BackColor = Color.LightSteelBlue;
+            btnBireysel.FlatStyle = FlatStyle.Popup;
+            btnBireysel.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            btnBireysel.Location = new Point(12, 51);
+            btnBireysel.Name = "btnBireysel";
+            btnBireysel.Size = new Size(160, 75);
+            btnBireysel.TabIndex = 2;
+            btnBireysel.Text = "Bireysel\r\nİrsaliye\r\n";
+            btnBireysel.UseVisualStyleBackColor = false;
+            btnBireysel.Click += btnBireysel_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.DeepSkyBlue;
+            panel1.Controls.Add(btnBireysel);
+            panel1.Controls.Add(btnRefres);
+            panel1.Controls.Add(btnKurumsal);
+            panel1.Location = new Point(0, 24);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(196, 658);
+            panel1.TabIndex = 28;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.DeepSkyBlue;
+            panel2.Location = new Point(195, 24);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1069, 51);
+            panel2.TabIndex = 29;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(2226, 681);
-            Controls.Add(btnRefres);
+            ClientSize = new Size(1264, 681);
             Controls.Add(grbKurumsal);
-            Controls.Add(btnKurumsal);
-            Controls.Add(btnBireysel);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Controls.Add(grbBireysel);
             Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 9F);
+            ForeColor = Color.DarkBlue;
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
@@ -414,6 +449,7 @@
             grbBireysel.PerformLayout();
             grbKurumsal.ResumeLayout(false);
             grbKurumsal.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -426,8 +462,6 @@
         private ToolStripMenuItem bireyselMüşteriToolStripMenuItem;
         private ToolStripMenuItem irsaliyeYazdırToolStripMenuItem;
         private ToolStripMenuItem irsaliyeGeçmişiToolStripMenuItem;
-        private Button btnBireysel;
-        private Button btnKurumsal;
         private GroupBox grbBireysel;
         private Label label1;
         private ComboBox cmbBireyselSec;
@@ -452,7 +486,11 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private Button btnRefres;
         private ToolStripMenuItem tümMüşterilerToolStripMenuItem;
+        private Button btnRefres;
+        private Button btnKurumsal;
+        private Button btnBireysel;
+        private Panel panel1;
+        private Panel panel2;
     }
 }

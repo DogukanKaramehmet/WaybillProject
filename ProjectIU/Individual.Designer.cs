@@ -37,13 +37,15 @@
             txtAddress = new TextBox();
             lblAddress = new Label();
             btnAdd = new Button();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // lblName
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            lblName.Location = new Point(59, 83);
+            lblName.Location = new Point(73, 59);
             lblName.Name = "lblName";
             lblName.Size = new Size(61, 37);
             lblName.TabIndex = 0;
@@ -52,7 +54,7 @@
             // txtName
             // 
             txtName.Font = new Font("Segoe UI", 20F);
-            txtName.Location = new Point(59, 123);
+            txtName.Location = new Point(73, 99);
             txtName.Name = "txtName";
             txtName.Size = new Size(200, 43);
             txtName.TabIndex = 1;
@@ -60,7 +62,7 @@
             // txtSurname
             // 
             txtSurname.Font = new Font("Segoe UI", 20F);
-            txtSurname.Location = new Point(59, 209);
+            txtSurname.Location = new Point(73, 185);
             txtSurname.Name = "txtSurname";
             txtSurname.Size = new Size(200, 43);
             txtSurname.TabIndex = 3;
@@ -69,7 +71,7 @@
             // 
             lblSurname.AutoSize = true;
             lblSurname.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            lblSurname.Location = new Point(59, 169);
+            lblSurname.Location = new Point(73, 145);
             lblSurname.Name = "lblSurname";
             lblSurname.Size = new Size(104, 37);
             lblSurname.TabIndex = 2;
@@ -78,7 +80,7 @@
             // txtPhoneNumber
             // 
             txtPhoneNumber.Font = new Font("Segoe UI", 20F);
-            txtPhoneNumber.Location = new Point(59, 295);
+            txtPhoneNumber.Location = new Point(73, 271);
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.Size = new Size(200, 43);
             txtPhoneNumber.TabIndex = 5;
@@ -87,7 +89,7 @@
             // 
             lblPohneNumber.AutoSize = true;
             lblPohneNumber.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            lblPohneNumber.Location = new Point(59, 255);
+            lblPohneNumber.Location = new Point(73, 231);
             lblPohneNumber.Name = "lblPohneNumber";
             lblPohneNumber.Size = new Size(112, 37);
             lblPohneNumber.TabIndex = 4;
@@ -96,7 +98,7 @@
             // txtAddress
             // 
             txtAddress.Font = new Font("Segoe UI", 20F);
-            txtAddress.Location = new Point(311, 123);
+            txtAddress.Location = new Point(325, 99);
             txtAddress.Multiline = true;
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(423, 215);
@@ -106,7 +108,7 @@
             // 
             lblAddress.AutoSize = true;
             lblAddress.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            lblAddress.Location = new Point(311, 83);
+            lblAddress.Location = new Point(325, 59);
             lblAddress.Name = "lblAddress";
             lblAddress.Size = new Size(91, 37);
             lblAddress.TabIndex = 6;
@@ -114,35 +116,48 @@
             // 
             // btnAdd
             // 
+            btnAdd.BackColor = Color.LightSteelBlue;
+            btnAdd.FlatStyle = FlatStyle.Popup;
             btnAdd.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            btnAdd.Location = new Point(59, 384);
+            btnAdd.Location = new Point(73, 360);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(200, 86);
             btnAdd.TabIndex = 8;
             btnAdd.Text = "KAYDET";
-            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += btnAdd_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.DeepSkyBlue;
+            panel1.Controls.Add(lblAddress);
+            panel1.Controls.Add(btnAdd);
+            panel1.Controls.Add(lblName);
+            panel1.Controls.Add(txtAddress);
+            panel1.Controls.Add(txtName);
+            panel1.Controls.Add(lblSurname);
+            panel1.Controls.Add(txtPhoneNumber);
+            panel1.Controls.Add(txtSurname);
+            panel1.Controls.Add(lblPohneNumber);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(800, 600);
+            panel1.TabIndex = 9;
             // 
             // Individual
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(784, 561);
-            Controls.Add(btnAdd);
-            Controls.Add(txtAddress);
-            Controls.Add(lblAddress);
-            Controls.Add(txtPhoneNumber);
-            Controls.Add(lblPohneNumber);
-            Controls.Add(txtSurname);
-            Controls.Add(lblSurname);
-            Controls.Add(txtName);
-            Controls.Add(lblName);
+            Controls.Add(panel1);
+            ForeColor = Color.DarkBlue;
             Name = "Individual";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Bireysel Müşteri";
             Load += IndividualCustomer_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -156,5 +171,6 @@
         private TextBox txtAddress;
         private Label lblAddress;
         private Button btnAdd;
+        private Panel panel1;
     }
 }

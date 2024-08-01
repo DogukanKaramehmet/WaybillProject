@@ -35,23 +35,27 @@
             lblPohneNumber = new Label();
             txtName = new TextBox();
             lblName = new Label();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnAdd
             // 
+            btnAdd.BackColor = Color.LightSteelBlue;
+            btnAdd.FlatStyle = FlatStyle.Popup;
             btnAdd.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            btnAdd.Location = new Point(40, 354);
+            btnAdd.Location = new Point(67, 359);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(200, 86);
             btnAdd.TabIndex = 17;
             btnAdd.Text = "KAYDET";
-            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += btnAdd_Click;
             // 
             // txtAddress
             // 
             txtAddress.Font = new Font("Segoe UI", 20F);
-            txtAddress.Location = new Point(292, 93);
+            txtAddress.Location = new Point(319, 96);
             txtAddress.Multiline = true;
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(423, 215);
@@ -61,7 +65,7 @@
             // 
             lblAddress.AutoSize = true;
             lblAddress.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            lblAddress.Location = new Point(292, 53);
+            lblAddress.Location = new Point(319, 56);
             lblAddress.Name = "lblAddress";
             lblAddress.Size = new Size(91, 37);
             lblAddress.TabIndex = 15;
@@ -70,7 +74,7 @@
             // txtPhoneNumber
             // 
             txtPhoneNumber.Font = new Font("Segoe UI", 20F);
-            txtPhoneNumber.Location = new Point(40, 187);
+            txtPhoneNumber.Location = new Point(67, 199);
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.Size = new Size(200, 43);
             txtPhoneNumber.TabIndex = 14;
@@ -79,7 +83,7 @@
             // 
             lblPohneNumber.AutoSize = true;
             lblPohneNumber.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            lblPohneNumber.Location = new Point(40, 147);
+            lblPohneNumber.Location = new Point(67, 159);
             lblPohneNumber.Name = "lblPohneNumber";
             lblPohneNumber.Size = new Size(112, 37);
             lblPohneNumber.TabIndex = 13;
@@ -88,7 +92,7 @@
             // txtName
             // 
             txtName.Font = new Font("Segoe UI", 20F);
-            txtName.Location = new Point(40, 93);
+            txtName.Location = new Point(67, 105);
             txtName.Name = "txtName";
             txtName.Size = new Size(200, 43);
             txtName.TabIndex = 10;
@@ -97,30 +101,41 @@
             // 
             lblName.AutoSize = true;
             lblName.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            lblName.Location = new Point(40, 53);
+            lblName.Location = new Point(67, 65);
             lblName.Name = "lblName";
             lblName.Size = new Size(164, 37);
             lblName.TabIndex = 9;
             lblName.Text = "Kurum İsmi";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.DeepSkyBlue;
+            panel1.Controls.Add(lblAddress);
+            panel1.Controls.Add(btnAdd);
+            panel1.Controls.Add(lblName);
+            panel1.Controls.Add(txtAddress);
+            panel1.Controls.Add(txtName);
+            panel1.Controls.Add(lblPohneNumber);
+            panel1.Controls.Add(txtPhoneNumber);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(800, 600);
+            panel1.TabIndex = 18;
             // 
             // Corporate
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(784, 561);
-            Controls.Add(btnAdd);
-            Controls.Add(txtAddress);
-            Controls.Add(lblAddress);
-            Controls.Add(txtPhoneNumber);
-            Controls.Add(lblPohneNumber);
-            Controls.Add(txtName);
-            Controls.Add(lblName);
+            Controls.Add(panel1);
+            ForeColor = Color.DarkBlue;
             Name = "Corporate";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Kurumsal Müşteri";
             Load += Corporate_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -132,5 +147,6 @@
         private Label lblPohneNumber;
         private TextBox txtName;
         private Label lblName;
+        private Panel panel1;
     }
 }
