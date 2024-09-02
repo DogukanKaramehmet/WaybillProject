@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllCorporate));
             dgwCorporate = new DataGridView();
             txtSearch = new TextBox();
             lblSerach = new Label();
@@ -128,6 +129,7 @@
             Controls.Add(panel1);
             Controls.Add(dgwCorporate);
             ForeColor = Color.DarkBlue;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AllCorporate";
             Text = "Tüm Müşteriler";
             Load += AllCorporate_Load;

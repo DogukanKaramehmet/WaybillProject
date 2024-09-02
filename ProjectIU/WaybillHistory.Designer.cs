@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WaybillHistory));
             dgwWaybillHistory = new DataGridView();
             txtSearch = new TextBox();
             lblSearch = new Label();
@@ -99,6 +100,7 @@
             Controls.Add(panel1);
             Controls.Add(dgwWaybillHistory);
             ForeColor = Color.DarkBlue;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "WaybillHistory";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "İrsaliye Geçmişi";

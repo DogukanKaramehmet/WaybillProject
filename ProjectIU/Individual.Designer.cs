@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Individual));
             lblName = new Label();
             txtName = new TextBox();
             txtSurname = new TextBox();
@@ -151,6 +152,7 @@
             ClientSize = new Size(784, 561);
             Controls.Add(panel1);
             ForeColor = Color.DarkBlue;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Individual";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Bireysel Müşteri";

@@ -12,7 +12,8 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=Waybill;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-C7AE3DJ\SQLEXPRESS;Database=Waybill;Trusted_Connection=true;TrustServerCertificate=True;");
+
         }
 
         public DbSet<Waybill> Waybills { get; set; }

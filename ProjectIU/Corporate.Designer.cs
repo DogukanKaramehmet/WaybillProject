@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Corporate));
             btnAdd = new Button();
             txtAddress = new TextBox();
             lblAddress = new Label();
@@ -129,6 +130,7 @@
             ClientSize = new Size(784, 561);
             Controls.Add(panel1);
             ForeColor = Color.DarkBlue;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Corporate";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Kurumsal Müşteri";

@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{DF049CF0-23C2-4650-9279-351D1545C7FC}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WaybillSetup", "WaybillSetup\WaybillSetup.vdproj", "{476B7BDE-A60A-4CA8-9115-90517DFF9E08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,8 @@ Global
 		{DF049CF0-23C2-4650-9279-351D1545C7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF049CF0-23C2-4650-9279-351D1545C7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF049CF0-23C2-4650-9279-351D1545C7FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{476B7BDE-A60A-4CA8-9115-90517DFF9E08}.Debug|Any CPU.ActiveCfg = Debug
+		{476B7BDE-A60A-4CA8-9115-90517DFF9E08}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

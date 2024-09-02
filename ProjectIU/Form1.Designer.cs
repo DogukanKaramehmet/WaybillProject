@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             menuStrip1 = new MenuStrip();
             irsaliyeYazdırToolStripMenuItem = new ToolStripMenuItem();
             irsaliyeGeçmişiToolStripMenuItem = new ToolStripMenuItem();
@@ -438,6 +439,7 @@
             Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 9F);
             ForeColor = Color.DarkBlue;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
